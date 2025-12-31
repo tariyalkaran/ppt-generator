@@ -1,0 +1,9 @@
+streamlit
+python-pptx
+requests
+openai>=1.0.0
+chromadb
+azure-storage-blob
+python-dotenv
+Pillow
+pywin32
