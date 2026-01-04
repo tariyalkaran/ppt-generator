@@ -1,0 +1,199 @@
+ Image ospai_ppt_generator-streamlit_app Built                                                                               71.2s
+ ✔ Container ospai-ppt-streamlit           Recreated                                                                            0.2s
+Attaching to ospai-ppt-streamlit
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   You can now view your Streamlit app in your browser.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   URL: http://0.0.0.0:9403
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py:
+ospai-ppt-streamlit  |   129 in exec_func_with_error_handling
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:669 in code_to_exec
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:165 in _mpa_v1
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/navigation/page.py:310 in run
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/frontend/pages/1_Home.py:6 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       3 import tempfile
+ospai-ppt-streamlit  |       4 import streamlit as st
+ospai-ppt-streamlit  |       5 from pptx import Presentation
+ospai-ppt-streamlit  |   ❱   6 from backend.search_utils import collection, semantic_search
+ospai-ppt-streamlit  |       7 from backend.azure_blob_utils import download_source_ppt_from_blob
+ospai-ppt-streamlit  |       8 from backend.slide_renderer import extract_slide_structure
+ospai-ppt-streamlit  |       9 from backend.utils import logger
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | ModuleNotFoundError: No module named 'backend'
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py:
+ospai-ppt-streamlit  |   129 in exec_func_with_error_handling
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:669 in code_to_exec
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:165 in _mpa_v1
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/navigation/page.py:310 in run
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/frontend/pages/1_Home.py:6 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       3 import tempfile
+ospai-ppt-streamlit  |       4 import streamlit as st
+ospai-ppt-streamlit  |       5 from pptx import Presentation
+ospai-ppt-streamlit  |   ❱   6 from backend.search_utils import collection, semantic_search
+ospai-ppt-streamlit  |       7 from backend.azure_blob_utils import download_source_ppt_from_blob
+ospai-ppt-streamlit  |       8 from backend.slide_renderer import extract_slide_structure
+ospai-ppt-streamlit  |       9 from backend.utils import logger
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | ModuleNotFoundError: No module named 'backend'
+ospai-ppt-streamlit  | 2026-01-04 18:20:45,244 | INFO | chromadb.telemetry.product.posthog | Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py:
+ospai-ppt-streamlit  |   129 in exec_func_with_error_handling
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:669 in code_to_exec
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:165 in _mpa_v1
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/navigation/page.py:310 in run
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/frontend/pages/1_Home.py:8 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       5 from pptx import Presentation
+ospai-ppt-streamlit  |       6 from backend.search_utils import collection, semantic_search
+ospai-ppt-streamlit  |       7 from backend.azure_blob_utils import download_source_ppt_from_blob
+ospai-ppt-streamlit  |   ❱   8 from backend.slide_renderer import extract_slide_structure
+ospai-ppt-streamlit  |       9 from backend.utils import logger
+ospai-ppt-streamlit  |      10
+ospai-ppt-streamlit  |      11 st.set_page_config(page_title="1 - Home", layout="wide")
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/backend/slide_renderer.py:4 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       1 # slide_renderer.py
+ospai-ppt-streamlit  |       2 import os
+ospai-ppt-streamlit  |       3 import uuid
+ospai-ppt-streamlit  |   ❱   4 import pythoncom
+ospai-ppt-streamlit  |       5 import platform
+ospai-ppt-streamlit  |       6 import win32com.client
+ospai-ppt-streamlit  |       7 from pptx import Presentation
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | ModuleNotFoundError: No module named 'pythoncom'
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py:
+ospai-ppt-streamlit  |   129 in exec_func_with_error_handling
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:669 in code_to_exec
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:165 in _mpa_v1
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/navigation/page.py:310 in run
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/frontend/pages/1_Home.py:8 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       5 from pptx import Presentation
+ospai-ppt-streamlit  |       6 from backend.search_utils import collection, semantic_search
+ospai-ppt-streamlit  |       7 from backend.azure_blob_utils import download_source_ppt_from_blob
+ospai-ppt-streamlit  |   ❱   8 from backend.slide_renderer import extract_slide_structure
+ospai-ppt-streamlit  |       9 from backend.utils import logger
+ospai-ppt-streamlit  |      10
+ospai-ppt-streamlit  |      11 st.set_page_config(page_title="1 - Home", layout="wide")
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/backend/slide_renderer.py:4 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       1 # slide_renderer.py
+ospai-ppt-streamlit  |       2 import os
+ospai-ppt-streamlit  |       3 import uuid
+ospai-ppt-streamlit  |   ❱   4 import pythoncom
+ospai-ppt-streamlit  |       5 import platform
+ospai-ppt-streamlit  |       6 import win32com.client
+ospai-ppt-streamlit  |       7 from pptx import Presentation
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | ModuleNotFoundError: No module named 'pythoncom'
+ospai-ppt-streamlit  | 2026-01-04 18:21:06,278 | INFO | azure.core.pipeline.policies.http_logging_policy | Request URL: 'https://2238880sa.blob.core.windows.net/ppt-dataset?restype=REDACTED'
+ospai-ppt-streamlit  | Request method: 'PUT'
+ospai-ppt-streamlit  | Request headers:
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'Accept': 'application/xml'
+ospai-ppt-streamlit  |     'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.12.12 (Linux-6.8.0-1044-azure-x86_64-with-glibc2.41)'
+ospai-ppt-streamlit  |     'x-ms-date': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '2293031c-e99a-11f0-a49d-ce25d80929b8'
+ospai-ppt-streamlit  |     'Authorization': 'REDACTED'
+ospai-ppt-streamlit  | No body was attached to the request
+ospai-ppt-streamlit  | 2026-01-04 18:21:06,568 | INFO | azure.core.pipeline.policies.http_logging_policy | Response status: 409
+ospai-ppt-streamlit  | Response headers:
+ospai-ppt-streamlit  |     'Content-Length': '230'
+ospai-ppt-streamlit  |     'Content-Type': 'application/xml'
+ospai-ppt-streamlit  |     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+ospai-ppt-streamlit  |     'x-ms-request-id': '21919897-801e-005f-25a6-7de1c1000000'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '2293031c-e99a-11f0-a49d-ce25d80929b8'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-error-code': 'ContainerAlreadyExists'
+ospai-ppt-streamlit  |     'Date': 'Sun, 04 Jan 2026 18:21:05 GMT'
+ospai-ppt-streamlit  | 2026-01-04 18:21:06,570 | INFO | azure.core.pipeline.policies.http_logging_policy | Request URL: 'https://2238880sa.blob.core.windows.net/ppt-dataset?restype=REDACTED&comp=REDACTED'
+ospai-ppt-streamlit  | Request method: 'GET'
+ospai-ppt-streamlit  | Request headers:
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'Accept': 'application/xml'
+ospai-ppt-streamlit  |     'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.12.12 (Linux-6.8.0-1044-azure-x86_64-with-glibc2.41)'
+ospai-ppt-streamlit  |     'x-ms-date': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '22bf9990-e99a-11f0-a49d-ce25d80929b8'
+ospai-ppt-streamlit  |     'Authorization': 'REDACTED'
+ospai-ppt-streamlit  | No body was attached to the request
+ospai-ppt-streamlit  | 2026-01-04 18:21:06,637 | INFO | azure.core.pipeline.policies.http_logging_policy | Response status: 200
+ospai-ppt-streamlit  | Response headers:
+ospai-ppt-streamlit  |     'Transfer-Encoding': 'chunked'
+ospai-ppt-streamlit  |     'Content-Type': 'application/xml'
+ospai-ppt-streamlit  |     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+ospai-ppt-streamlit  |     'x-ms-request-id': '219198b6-801e-005f-42a6-7de1c1000000'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '22bf9990-e99a-11f0-a49d-ce25d80929b8'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'Date': 'Sun, 04 Jan 2026 18:21:05 GMT'
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py:
+ospai-ppt-streamlit  |   129 in exec_func_with_error_handling
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:669 in code_to_exec
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:165 in _mpa_v1
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/navigation/page.py:310 in run
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/frontend/pages/1_Home.py:8 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       5 from pptx import Presentation
+ospai-ppt-streamlit  |       6 from backend.search_utils import collection, semantic_search
+ospai-ppt-streamlit  |       7 from backend.azure_blob_utils import download_source_ppt_from_blob
+ospai-ppt-streamlit  |   ❱   8 from backend.slide_renderer import extract_slide_structure
+ospai-ppt-streamlit  |       9 from backend.utils import logger
+ospai-ppt-streamlit  |      10
+ospai-ppt-streamlit  |      11 st.set_page_config(page_title="1 - Home", layout="wide")
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/backend/slide_renderer.py:4 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       1 # slide_renderer.py
+ospai-ppt-streamlit  |       2 import os
+ospai-ppt-streamlit  |       3 import uuid
+ospai-ppt-streamlit  |   ❱   4 import pythoncom
+ospai-ppt-streamlit  |       5 import platform
+ospai-ppt-streamlit  |       6 import win32com.client
+ospai-ppt-streamlit  |       7 from pptx import Presentation
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | ModuleNotFoundError: No module named 'pythoncom'
+
+
+w Enable Watch   d Detach
