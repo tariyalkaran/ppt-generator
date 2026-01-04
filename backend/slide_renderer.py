@@ -1,8 +1,15 @@
 # slide_renderer.py
 import os
 import uuid
-import pythoncom
-import win32com.client
+import platform 
+# import pythoncom
+# import win32com.client
+
+IS_WINDOWS = platform.system() == "Windows"
+
+if IS_WINDOWS:
+    import pythoncom
+    import win32com.client
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 
