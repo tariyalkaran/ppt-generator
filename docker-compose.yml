@@ -1,19 +1,21 @@
+version: "3.9"
 services:
-  streamlit_app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: qnxt-streamlit
-    ports:
-      - "9400:9401"  
-    env_file:
-      - .env
-    environment:
-     - CHROMA_PERSIST_DIR=/app/backend/schema_embeddings_store
-     - CHROMA_COLLECTION_NAME=qnxt-schema-collection
-    volumes:
-      - ./frontend:/app/frontend
-      - ./backend:/app/backend
-      - ./backend/schema_embeddings_store:/app/backend/schema_embeddings_store
-    working_dir: /app/frontend
-    restart: always
+ streamlit_app:
+   build:
+     context: .
+     dockerfile: Dockerfile
+   container_name: ospai-ppt-streamlit
+   ports:
+     - "9402:9403"
+   env_file:
+     - .env
+   environment:
+     CHROMA_PERSIST_DIR: /app/chroma_db
+     PYTHONPATH: /app
+   volumes:
+     - ./frontend:/app/frontend
+     - ./backend:/app/backend
+     - ./templates:/app/templates
+     - ./chroma_db:/app/chroma_db
+   working_dir: /app/frontend
+   restart: always
