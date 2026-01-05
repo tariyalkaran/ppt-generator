@@ -1,0 +1,51 @@
+2026-01-05 18:12:57,392 | INFO | chromadb.telemetry.product.posthog | Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-01-05 18:13:15,974 | INFO | ai-ppt-generator-chroma | Keyword match found → using PPT: Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx
+────────────────────────── Traceback (most recent call last) ───────────────────────────
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\.venv\Lib\site-packages\streamlit\ru
+  ntime\scriptrunner\exec_code.py:129 in exec_func_with_error_handling
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\.venv\Lib\site-packages\streamlit\ru
+  ntime\scriptrunner\script_runner.py:669 in code_to_exec
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\.venv\Lib\site-packages\streamlit\ru
+  ntime\scriptrunner\script_runner.py:165 in _mpa_v1
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\.venv\Lib\site-packages\streamlit\na
+  vigation\page.py:310 in run
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\frontend\pages\1_Home.py:109 in
+  <module>
+
+    106 │   │   │   prs = Presentation(local_ppt)
+    107 │   │   │   
+    108 │   │   │   for idx in range(len(prs.slides)):
+  ❱ 109 │   │   │   │   slide_struct = extract_slide_structure(local_ppt, idx)
+    110 │   │   │   │   chroma_title = get_slide_title_from_chroma(matched_ppt,idx).lo
+    111 │   │   │   │   
+    112 │   │   │   │   # ❌ Exclude agenda & thank-you
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\backend\slide_renderer.py:92 in
+  extract_slide_structure
+
+     89 │   │   │   │   │   })
+     90 │   │   │   │   │   idx += 1
+     91 │   
+  ❱  92 │   png_path = export_slide_to_png(ppt_path, slide_index)
+     93 │   
+     94 │   return {
+     95 │   │   "slide_index": slide_index,
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\backend\slide_renderer.py:25 in
+  export_slide_to_png
+
+     22 │   
+     23 │   slide.Export(out_path, "PNG", 1920, 1080)
+     24 │   
+  ❱  25 │   pres.Close()
+     26 │   powerpoint.Quit()
+     27 │   pythoncom.CoUninitialize()
+     28 
+  in Close:2
+────────────────────────────────────────────────────────────────────────────────────────
+com_error: (-2147352567, 'Exception occurred.', (0, 'Microsoft PowerPoint',
+'Presentation.Close : Failed.', '', 0, -2147467259), None)
