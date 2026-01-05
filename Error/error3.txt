@@ -1,0 +1,227 @@
+--------------------
+
+failed to solve: process "/bin/sh -c pip install --no-cache-dir -r requirements.txt" did not complete successfully: exit code: 1
+
+optuser@t3ode-lnx-033:~/Desktop/OSPAI_PPT_Generator$ nano requirements.txt
+optuser@t3ode-lnx-033:~/Desktop/OSPAI_PPT_Generator$ docker compose up --build
+WARN[0000] /home/optuser/Desktop/OSPAI_PPT_Generator/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] Building 72.2s (13/13) FINISHED
+ => [internal] load local bake definitions                                                                                      0.0s
+ => => reading from stdin 586B                                                                                                  0.0s
+ => [internal] load build definition from Dockerfile                                                                            0.0s
+ => => transferring dockerfile: 2.90kB                                                                                          0.0s
+ => [internal] load metadata for docker.io/library/python:3.12-slim                                                             0.3s
+ => [internal] load .dockerignore                                                                                               0.0s
+ => => transferring context: 2B                                                                                                 0.0s
+ => [1/6] FROM docker.io/library/python:3.12-slim@sha256:a75662dfec8d90bd7161c91050be2e0a9b21d284f3b7a7253d5db25f7d583fb3       0.0s
+ => [internal] load build context                                                                                               0.0s
+ => => transferring context: 3.40kB                                                                                             0.0s
+ => CACHED [2/6] WORKDIR /app                                                                                                   0.0s
+ => CACHED [3/6] RUN apt-get update && apt-get install -y --no-install-recommends    build-essential    curl    gnupg    unixo  0.0s
+ => [4/6] COPY requirements.txt .                                                                                               0.1s
+ => [5/6] RUN pip install --no-cache-dir -r requirements.txt                                                                   62.7s
+ => [6/6] COPY . .                                                                                                              0.2s
+ => exporting to image                                                                                                          8.4s
+ => => exporting layers                                                                                                         8.3s
+ => => writing image sha256:abcf4e5409edb335bc913e4aa5b3e260d0383d42e96f70e9b6a4fbdfe237658b                                    0.0s
+ => => naming to docker.io/library/ospai_ppt_generator-streamlit_app                                                            0.0s
+ => resolving provenance for metadata file                                                                                      0.0s
+[+] up 2/2
+ ✔ Image ospai_ppt_generator-streamlit_app Built                                                                               72.2s
+ ✔ Container ospai-ppt-streamlit           Recreated                                                                            0.2s
+Attaching to ospai-ppt-streamlit
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   You can now view your Streamlit app in your browser.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   URL: http://0.0.0.0:9403
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py:
+ospai-ppt-streamlit  |   129 in exec_func_with_error_handling
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:669 in code_to_exec
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:165 in _mpa_v1
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/navigation/page.py:310 in run
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/frontend/pages/1_Home.py:6 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       3 import tempfile
+ospai-ppt-streamlit  |       4 import streamlit as st
+ospai-ppt-streamlit  |       5 from pptx import Presentation
+ospai-ppt-streamlit  |   ❱   6 from backend.search_utils import collection, semantic_search
+ospai-ppt-streamlit  |       7 from backend.azure_blob_utils import download_source_ppt_from_blob
+ospai-ppt-streamlit  |       8 from backend.slide_renderer import extract_slide_structure
+ospai-ppt-streamlit  |       9 from backend.utils import logger
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | ModuleNotFoundError: No module named 'backend'
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py:
+ospai-ppt-streamlit  |   129 in exec_func_with_error_handling
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:669 in code_to_exec
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:165 in _mpa_v1
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/navigation/page.py:310 in run
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/frontend/pages/1_Home.py:6 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |       3 import tempfile
+ospai-ppt-streamlit  |       4 import streamlit as st
+ospai-ppt-streamlit  |       5 from pptx import Presentation
+ospai-ppt-streamlit  |   ❱   6 from backend.search_utils import collection, semantic_search
+ospai-ppt-streamlit  |       7 from backend.azure_blob_utils import download_source_ppt_from_blob
+ospai-ppt-streamlit  |       8 from backend.slide_renderer import extract_slide_structure
+ospai-ppt-streamlit  |       9 from backend.utils import logger
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | ModuleNotFoundError: No module named 'backend'
+ospai-ppt-streamlit  | 2026-01-05 09:08:33,892 | INFO | chromadb.telemetry.product.posthog | Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+ospai-ppt-streamlit  | 2026-01-05 09:09:17,747 | INFO | ai-ppt-generator-chroma | Keyword match found → using PPT: Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx
+ospai-ppt-streamlit  | 2026-01-05 09:09:17,758 | INFO | azure.core.pipeline.policies.http_logging_policy | Request URL: 'https://2238880sa.blob.core.windows.net/ppt-dataset/Proposed%20Approach%20for%20CareFirst%20Global%20Design%20-%20September%202021%20-%20V4.10.pptx'
+ospai-ppt-streamlit  | Request method: 'GET'
+ospai-ppt-streamlit  | Request headers:
+ospai-ppt-streamlit  |     'x-ms-range': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'Accept': 'application/xml'
+ospai-ppt-streamlit  |     'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.12.12 (Linux-6.8.0-1044-azure-x86_64-with-glibc2.41)'
+ospai-ppt-streamlit  |     'x-ms-date': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '36c588c4-ea16-11f0-83e0-9212eb2d3759'
+ospai-ppt-streamlit  |     'Authorization': 'REDACTED'
+ospai-ppt-streamlit  | No body was attached to the request
+ospai-ppt-streamlit  | 2026-01-05 09:09:18,143 | INFO | azure.core.pipeline.policies.http_logging_policy | Response status: 206
+ospai-ppt-streamlit  | Response headers:
+ospai-ppt-streamlit  |     'Content-Length': '1744907'
+ospai-ppt-streamlit  |     'Content-Type': 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+ospai-ppt-streamlit  |     'Content-Range': 'REDACTED'
+ospai-ppt-streamlit  |     'Last-Modified': 'Tue, 04 Nov 2025 16:09:15 GMT'
+ospai-ppt-streamlit  |     'Accept-Ranges': 'REDACTED'
+ospai-ppt-streamlit  |     'ETag': '"0x8DE1BBC806B58A9"'
+ospai-ppt-streamlit  |     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+ospai-ppt-streamlit  |     'x-ms-request-id': 'cfeaef69-301e-0075-5e22-7e3ed1000000'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '36c588c4-ea16-11f0-83e0-9212eb2d3759'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-creation-time': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-blob-content-md5': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-lease-status': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-lease-state': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-blob-type': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-server-encrypted': 'REDACTED'
+ospai-ppt-streamlit  |     'Date': 'Mon, 05 Jan 2026 09:09:17 GMT'
+ospai-ppt-streamlit  | 2026-01-05 09:09:18,800 | INFO | ai-ppt-generator-chroma | Downloaded SOURCE PPT Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | 2026-01-05 09:09:47.038 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py:289 in
+ospai-ppt-streamlit  |   image_to_url
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | FileNotFoundError: [Errno 2] No such file or directory: '/tmp/Proposed Approach for
+ospai-ppt-streamlit  | CareFirst Global Design - September 2021 - V4.10_1.png'
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | During handling of the above exception, another exception occurred:
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.
+ospai-ppt-streamlit  |   py:164 in _read_file
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | FileNotFoundError: [Errno 2] No such file or directory: '/tmp/Proposed Approach for
+ospai-ppt-streamlit  | CareFirst Global Design - September 2021 - V4.10_1.png'
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | The above exception was the direct cause of the following exception:
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py:
+ospai-ppt-streamlit  |   129 in exec_func_with_error_handling
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:669 in code_to_exec
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:165 in _mpa_v1
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/navigation/page.py:310 in run
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/frontend/pages/2_🖼️_Slide_Selection.py:30 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |     27 │   col = cols[i % 3]
+ospai-ppt-streamlit  |     28 │   with col:
+ospai-ppt-streamlit  |     29 │   │   # ✅ REAL slide thumbnail
+ospai-ppt-streamlit  |   ❱ 30 │   │   st.image(s.get("png_path"), use_container_width=True)
+ospai-ppt-streamlit  |     31 │   │
+ospai-ppt-streamlit  |     32 │   │   caption = f"{s.get('ppt_blob')} — slide {s.get('slide_index')}"
+ospai-ppt-streamlit  |     33 │   │   st.caption(caption)
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/metrics_util.py:531 in
+ospai-ppt-streamlit  |   wrapped_func
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/elements/image.py:206 in image
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py:445 in
+ospai-ppt-streamlit  |   marshall_images
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py:301 in
+ospai-ppt-streamlit  |   image_to_url
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/media_file_manager.py:277
+ospai-ppt-streamlit  |   in add
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.
+ospai-ppt-streamlit  |   py:114 in load_and_get_id
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.
+ospai-ppt-streamlit  |   py:167 in _read_file
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | MediaFileStorageError: Error opening '/tmp/Proposed Approach for CareFirst Global Design
+ospai-ppt-streamlit  | - September 2021 - V4.10_1.png'
+
+
+w Enable Watch   d Detach
