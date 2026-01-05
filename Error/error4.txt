@@ -1,0 +1,222 @@
+ospai-ppt-streamlit  | ModuleNotFoundError: No module named 'backend'
+ospai-ppt-streamlit  | 2026-01-05 09:24:00,333 | INFO | chromadb.telemetry.product.posthog | Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+ospai-ppt-streamlit  | 2026-01-05 09:24:35,643 | INFO | httpx | HTTP Request: POST https://ppt-generator-2238880.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-10-01-preview "HTTP/1.1 200 OK"
+ospai-ppt-streamlit  | 2026-01-05 09:24:35,680 | INFO | azure.core.pipeline.policies.http_logging_policy | Request URL: 'https://2238880sa.blob.core.windows.net/ppt-dataset/Proposed%20Approach%20for%20CareFirst%20Global%20Design%20-%20September%202021%20-%20V4.10.pptx'
+ospai-ppt-streamlit  | Request method: 'GET'
+ospai-ppt-streamlit  | Request headers:
+ospai-ppt-streamlit  |     'x-ms-range': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'Accept': 'application/xml'
+ospai-ppt-streamlit  |     'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.12.12 (Linux-6.8.0-1044-azure-x86_64-with-glibc2.41)'
+ospai-ppt-streamlit  |     'x-ms-date': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '59e5608e-ea18-11f0-bb41-ae3ece44c97c'
+ospai-ppt-streamlit  |     'Authorization': 'REDACTED'
+ospai-ppt-streamlit  | No body was attached to the request
+ospai-ppt-streamlit  | 2026-01-05 09:24:36,057 | INFO | azure.core.pipeline.policies.http_logging_policy | Response status: 206
+ospai-ppt-streamlit  | Response headers:
+ospai-ppt-streamlit  |     'Content-Length': '1744907'
+ospai-ppt-streamlit  |     'Content-Type': 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+ospai-ppt-streamlit  |     'Content-Range': 'REDACTED'
+ospai-ppt-streamlit  |     'Last-Modified': 'Tue, 04 Nov 2025 16:09:15 GMT'
+ospai-ppt-streamlit  |     'Accept-Ranges': 'REDACTED'
+ospai-ppt-streamlit  |     'ETag': '"0x8DE1BBC806B58A9"'
+ospai-ppt-streamlit  |     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+ospai-ppt-streamlit  |     'x-ms-request-id': 'd80b0a3f-c01e-0095-5125-7ebd48000000'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '59e5608e-ea18-11f0-bb41-ae3ece44c97c'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-creation-time': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-blob-content-md5': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-lease-status': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-lease-state': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-blob-type': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-server-encrypted': 'REDACTED'
+ospai-ppt-streamlit  |     'Date': 'Mon, 05 Jan 2026 09:24:35 GMT'
+ospai-ppt-streamlit  | 2026-01-05 09:24:36,851 | INFO | ai-ppt-generator-chroma | Downloaded SOURCE PPT Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | 2026-01-05 09:24:39,788 | INFO | azure.core.pipeline.policies.http_logging_policy | Request URL: 'https://2238880sa.blob.core.windows.net/ppt-dataset/CareSource%20Facets%20Reimplementation%2011_13_2017%20FINAL_Updated.pptx'
+ospai-ppt-streamlit  | Request method: 'GET'
+ospai-ppt-streamlit  | Request headers:
+ospai-ppt-streamlit  |     'x-ms-range': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'Accept': 'application/xml'
+ospai-ppt-streamlit  |     'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.12.12 (Linux-6.8.0-1044-azure-x86_64-with-glibc2.41)'
+ospai-ppt-streamlit  |     'x-ms-date': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '5c5838be-ea18-11f0-bb41-ae3ece44c97c'
+ospai-ppt-streamlit  |     'Authorization': 'REDACTED'
+ospai-ppt-streamlit  | No body was attached to the request
+ospai-ppt-streamlit  | 2026-01-05 09:24:40,110 | INFO | azure.core.pipeline.policies.http_logging_policy | Response status: 206
+ospai-ppt-streamlit  | Response headers:
+ospai-ppt-streamlit  |     'Content-Length': '2685598'
+ospai-ppt-streamlit  |     'Content-Type': 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+ospai-ppt-streamlit  |     'Content-Range': 'REDACTED'
+ospai-ppt-streamlit  |     'Last-Modified': 'Tue, 04 Nov 2025 16:09:15 GMT'
+ospai-ppt-streamlit  |     'Accept-Ranges': 'REDACTED'
+ospai-ppt-streamlit  |     'ETag': '"0x8DE1BBC8046232A"'
+ospai-ppt-streamlit  |     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+ospai-ppt-streamlit  |     'x-ms-request-id': 'bb0e26ac-b01e-0054-0d25-7e1aaa000000'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': '5c5838be-ea18-11f0-bb41-ae3ece44c97c'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-creation-time': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-blob-content-md5': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-lease-status': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-lease-state': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-blob-type': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-server-encrypted': 'REDACTED'
+ospai-ppt-streamlit  |     'Date': 'Mon, 05 Jan 2026 09:24:39 GMT'
+ospai-ppt-streamlit  | 2026-01-05 09:24:40,971 | INFO | ai-ppt-generator-chroma | Downloaded SOURCE PPT CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.pptx -> /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.pptx
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.pptx as a Impress document -> /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.pptx as a Impress document -> /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.pptx as a Impress document -> /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.pptx as a Impress document -> /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.pptx as a Impress document -> /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.png
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.pptx as a Impress document -> /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png using filter : impress_png_Export
+ospai-ppt-streamlit  | Overwriting: /tmp/CareSource Facets Reimplementation 11_13_2017 FINAL_Updated.png
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.264 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.290 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.297 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.303 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.308 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.311 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.316 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.325 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.329 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.334 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.341 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:25:19.348 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.881 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.886 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.893 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.899 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.906 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.912 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.917 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.923 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.929 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.934 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.941 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | 2026-01-05 09:29:53.946 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+
+
+w Enable Watch   d Detach
