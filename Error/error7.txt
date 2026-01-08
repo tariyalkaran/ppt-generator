@@ -1,0 +1,342 @@
+
+C:\Users\2097831>optuser@10.112.77.36
+'optuser@10.112.77.36' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\2097831>ssh optuser@10.112.77.36
+optuser@10.112.77.36's password:
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-1044-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Jan  8 11:50:14 UTC 2026
+
+  System load:  0.17                Processes:             392
+  Usage of /:   14.1% of 496.03GB   Users logged in:       0
+  Memory usage: 18%                 IPv4 address for eth0: 10.112.77.36
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+26 updates can be applied immediately.
+23 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+14 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+Last login: Wed Jan  7 07:32:14 2026 from 10.131.132.147
+optuser@t3ode-lnx-033:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  snap  thinclient_drives
+optuser@t3ode-lnx-033:~$ cd Desktop
+optuser@t3ode-lnx-033:~/Desktop$ ls
+HIR  OSPAI_FACETS_AI_INSIGHTS_CHATBOT  OSPAI_PPT_Generator  OSPAI_QNXT_Schema_Analysis
+optuser@t3ode-lnx-033:~/Desktop$ sudo rm -rf OSPAI_PPT_Generator
+[sudo] password for optuser:
+optuser@t3ode-lnx-033:~/Desktop$ git clone --branch Karan --single-branch https://TriZettoT3@dev.azure.com/TriZettoT3/OptimizationSoftwareProducts/_git/OSPAI_PPT_Generator
+Cloning into 'OSPAI_PPT_Generator'...
+Password for 'https://TriZettoT3@dev.azure.com':
+remote: Azure Repos
+remote: Found 280 objects to send. (55 ms)
+Receiving objects: 100% (280/280), 5.23 MiB | 5.72 MiB/s, done.
+Resolving deltas: 100% (135/135), done.
+optuser@t3ode-lnx-033:~/Desktop$ cd OSPAI_PPT_Generator
+optuser@t3ode-lnx-033:~/Desktop/OSPAI_PPT_Generator$ docker compose up --build
+[+] Building 170.5s (13/13) FINISHED
+ => [internal] load local bake definitions                                                                                      0.0s
+ => => reading from stdin 586B                                                                                                  0.0s
+ => [internal] load build definition from Dockerfile                                                                            0.1s
+ => => transferring dockerfile: 4.83kB                                                                                          0.0s
+ => [internal] load metadata for docker.io/library/python:3.12-slim                                                             0.7s
+ => [internal] load .dockerignore                                                                                               0.1s
+ => => transferring context: 2B                                                                                                 0.0s
+ => [1/6] FROM docker.io/library/python:3.12-slim@sha256:a75662dfec8d90bd7161c91050be2e0a9b21d284f3b7a7253d5db25f7d583fb3       0.0s
+ => [internal] load build context                                                                                               0.3s
+ => => transferring context: 12.25MB                                                                                            0.2s
+ => CACHED [2/6] WORKDIR /app                                                                                                   0.0s
+ => [3/6] RUN apt-get update && apt-get install -y --no-install-recommends    build-essential    curl    gnupg    unixodbc-de  91.3s
+ => [4/6] COPY requirements.txt .                                                                                               0.2s
+ => [5/6] RUN pip install --no-cache-dir -r requirements.txt                                                                   67.6s
+ => [6/6] COPY . .                                                                                                              0.2s
+ => exporting to image                                                                                                         10.0s
+ => => exporting layers                                                                                                        10.0s
+ => => writing image sha256:eda0642fd4f364c38903dc3541e3c072391a505aca5ef6d220ec2ca3ef64c926                                    0.0s
+ => => naming to docker.io/library/ospai_ppt_generator-streamlit_app                                                            0.0s
+ => resolving provenance for metadata file                                                                                      0.0s
+[+] up 2/2
+ ✔ Image ospai_ppt_generator-streamlit_app Built                                                                              170.6s
+ ✔ Container ospai-ppt-streamlit           Recreated                                                                            0.8s
+Attaching to ospai-ppt-streamlit
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+ospai-ppt-streamlit  | Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+ospai-ppt-streamlit  | Try 'streamlit run --help' for help.
+ospai-ppt-streamlit  | ch
+ospai-ppt-streamlit  | Error: Invalid value: File does not exist: frontend/app.py
+ospai-ppt-streamlit exited with code 2 (restarting)
+Gracefully Stopping... press Ctrl+C again to force
+Container ospai-ppt-streamlit Stopping
+Container ospai-ppt-streamlit Stopped
+^[[A^[[A^[[A^CContainer ospai-ppt-streamlit Killing
+Container ospai-ppt-streamlit Error Error while Killing
+
+optuser@t3ode-lnx-033:~/Desktop/OSPAI_PPT_Generator$ ^C
+optuser@t3ode-lnx-033:~/Desktop/OSPAI_PPT_Generator$ ls
+Dockerfile  README.md  backend  chroma_db  docker-compose.yml  frontend  requirements.txt  templates
+optuser@t3ode-lnx-033:~/Desktop/OSPAI_PPT_Generator$ nano Dockerfile
+optuser@t3ode-lnx-033:~/Desktop/OSPAI_PPT_Generator$ docker compose up --build
+[+] Building 162.9s (13/13) FINISHED
+ => [internal] load local bake definitions                                                                                      0.0s
+ => => reading from stdin 586B                                                                                                  0.0s
+ => [internal] load build definition from Dockerfile                                                                            0.0s
+ => => transferring dockerfile: 4.83kB                                                                                          0.0s
+ => [internal] load metadata for docker.io/library/python:3.12-slim                                                             0.7s
+ => [internal] load .dockerignore                                                                                               0.0s
+ => => transferring context: 2B                                                                                                 0.0s
+ => CACHED [1/6] FROM docker.io/library/python:3.12-slim@sha256:a75662dfec8d90bd7161c91050be2e0a9b21d284f3b7a7253d5db25f7d583f  0.0s
+ => [internal] load build context                                                                                               0.1s
+ => => transferring context: 8.03kB                                                                                             0.0s
+ => [2/6] WORKDIR /app/frontend                                                                                                 0.1s
+ => [3/6] RUN apt-get update && apt-get install -y --no-install-recommends    build-essential    curl    gnupg    unixodbc-de  85.0s
+ => [4/6] COPY requirements.txt .                                                                                               0.2s
+ => [5/6] RUN pip install --no-cache-dir -r requirements.txt                                                                   66.4s
+ => [6/6] COPY . .                                                                                                              0.2s
+ => exporting to image                                                                                                          9.8s
+ => => exporting layers                                                                                                         9.8s
+ => => writing image sha256:b8274012b80c0ce1e063d8b1e6520d34acf47361ea8c1107fd8938a0b757d3c7                                    0.0s
+ => => naming to docker.io/library/ospai_ppt_generator-streamlit_app                                                            0.0s
+ => resolving provenance for metadata file                                                                                      0.0s
+[+] up 2/2
+ ✔ Image ospai_ppt_generator-streamlit_app Built                                                                              163.0s
+ ✔ Container ospai-ppt-streamlit           Recreated                                                                            0.2s
+Attaching to ospai-ppt-streamlit
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   You can now view your Streamlit app in your browser.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   URL: http://0.0.0.0:9403
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | 2026-01-08 12:21:30,819 | INFO | chromadb.telemetry.product.posthog | Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+ospai-ppt-streamlit  | 2026-01-08 12:22:35,231 | INFO | ai-ppt-generator-chroma | Keyword match found → using PPT: Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx
+ospai-ppt-streamlit  | 2026-01-08 12:22:35,239 | INFO | azure.core.pipeline.policies.http_logging_policy | Request URL: 'https://2238880sa.blob.core.windows.net/ppt-dataset/Proposed%20Approach%20for%20CareFirst%20Global%20Design%20-%20September%202021%20-%20V4.10.pptx'
+ospai-ppt-streamlit  | Request method: 'GET'
+ospai-ppt-streamlit  | Request headers:
+ospai-ppt-streamlit  |     'x-ms-range': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'Accept': 'application/xml'
+ospai-ppt-streamlit  |     'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.12.12 (Linux-6.8.0-1044-azure-x86_64-with-glibc2.41)'
+ospai-ppt-streamlit  |     'x-ms-date': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': 'b6a5f3ee-ec8c-11f0-a185-1e097c7e7b77'
+ospai-ppt-streamlit  |     'Authorization': 'REDACTED'
+ospai-ppt-streamlit  | No body was attached to the request
+ospai-ppt-streamlit  | 2026-01-08 12:22:35,622 | INFO | azure.core.pipeline.policies.http_logging_policy | Response status: 206
+ospai-ppt-streamlit  | Response headers:
+ospai-ppt-streamlit  |     'Content-Length': '1744907'
+ospai-ppt-streamlit  |     'Content-Type': 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+ospai-ppt-streamlit  |     'Content-Range': 'REDACTED'
+ospai-ppt-streamlit  |     'Last-Modified': 'Tue, 04 Nov 2025 16:09:15 GMT'
+ospai-ppt-streamlit  |     'Accept-Ranges': 'REDACTED'
+ospai-ppt-streamlit  |     'ETag': '"0x8DE1BBC806B58A9"'
+ospai-ppt-streamlit  |     'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+ospai-ppt-streamlit  |     'x-ms-request-id': '536e8474-b01e-00a0-2799-80d15c000000'
+ospai-ppt-streamlit  |     'x-ms-client-request-id': 'b6a5f3ee-ec8c-11f0-a185-1e097c7e7b77'
+ospai-ppt-streamlit  |     'x-ms-version': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-creation-time': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-blob-content-md5': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-lease-status': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-lease-state': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-blob-type': 'REDACTED'
+ospai-ppt-streamlit  |     'x-ms-server-encrypted': 'REDACTED'
+ospai-ppt-streamlit  |     'Date': 'Thu, 08 Jan 2026 12:22:35 GMT'
+ospai-ppt-streamlit  | 2026-01-08 12:22:36,344 | INFO | ai-ppt-generator-chroma | Downloaded SOURCE PPT Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx
+ospai-ppt-streamlit  | Warning: failed to launch javaldx - java may not function correctly
+ospai-ppt-streamlit  | convert /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx as a Impress document -> /tmp/Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pdf using filter : impress_pdf_Export
+ospai-ppt-streamlit  | 2026-01-08 12:22:41.072 Please replace `use_container_width` with `width`.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | `use_container_width` will be removed after 2025-12-31.
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  | For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | [WARN] Slide preview failed: No module named 'pdf2image'
+ospai-ppt-streamlit  | ────────────────────────── Traceback (most recent call last) ───────────────────────────
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py:
+ospai-ppt-streamlit  |   129 in exec_func_with_error_handling
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:669 in code_to_exec
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner
+ospai-ppt-streamlit  |   .py:165 in _mpa_v1
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/navigation/page.py:310 in run
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /app/frontend/pages/2_🖼️_Slide_Selection.py:30 in <module>
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |     27 │   col = cols[i % 3]
+ospai-ppt-streamlit  |     28 │   with col:
+ospai-ppt-streamlit  |     29 │   │   # ✅ REAL slide thumbnail
+ospai-ppt-streamlit  |   ❱ 30 │   │   st.image(s.get("png_path"), use_container_width=True)
+ospai-ppt-streamlit  |     31 │   │
+ospai-ppt-streamlit  |     32 │   │   caption = f"{s.get('ppt_blob')} — slide {s.get('slide_index')}"
+ospai-ppt-streamlit  |     33 │   │   st.caption(caption)
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/runtime/metrics_util.py:531 in
+ospai-ppt-streamlit  |   wrapped_func
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/elements/image.py:206 in image
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py:445 in
+ospai-ppt-streamlit  |   marshall_images
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py:336 in
+ospai-ppt-streamlit  |   image_to_url
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py:115 in
+ospai-ppt-streamlit  |   _validate_image_format_string
+ospai-ppt-streamlit  |
+ospai-ppt-streamlit  |   /usr/local/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py:87 in
+ospai-ppt-streamlit  |   _image_is_gif
+ospai-ppt-streamlit  | ────────────────────────────────────────────────────────────────────────────────────────
+ospai-ppt-streamlit  | AttributeError: 'NoneType' object has no attribute 'format'
+
+
+w Enable Watch   d Detach
