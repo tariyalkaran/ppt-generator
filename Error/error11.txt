@@ -1,0 +1,88 @@
+PS C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator> .venv/scripts/activate       
+(.venv) PS C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator> streamlit run frontend\app.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.131.132.26:8501
+
+2026-01-09 15:37:42,298 | INFO | chromadb.telemetry.product.posthog | Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-01-09 15:38:51,671 | INFO | ai-ppt-generator-chroma | Keyword match found → using PPT: Proposed Approach for CareFirst Global Design - September 2021 - V4.10.pptx
+────────────────────────── Traceback (most recent call last) ───────────────────────────
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\.venv\Lib\site-packages\streamlit\ru
+  ntime\scriptrunner\exec_code.py:129 in exec_func_with_error_handling
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\.venv\Lib\site-packages\streamlit\ru
+  ntime\scriptrunner\script_runner.py:669 in code_to_exec
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\.venv\Lib\site-packages\streamlit\ru
+  ntime\scriptrunner\script_runner.py:165 in _mpa_v1
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\.venv\Lib\site-packages\streamlit\na
+  vigation\page.py:310 in run
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\frontend\pages\1_Home.py:109 in
+  <module>
+
+    106 │   │   │   prs = Presentation(local_ppt)
+    107 │   │   │   
+    108 │   │   │   for idx in range(len(prs.slides)):
+  ❱ 109 │   │   │   │   slide_struct = extract_slide_structure(local_ppt, idx)
+    110 │   │   │   │   chroma_title = get_slide_title_from_chroma(matched_ppt,idx).lo
+    111 │   │   │   │   
+    112 │   │   │   │   # ❌ Exclude agenda & thank-you
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\backend\slide_renderer.py:716 in
+  extract_slide_structure
+
+    713 │   │   │   │   │   
+    714 │   │   │   │   │   idx += 1
+    715 │   
+  ❱ 716 │   png_path = export_slide_to_png(ppt_path, slide_index)
+    717 │   
+    718 │   return {
+    719 
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\backend\slide_renderer.py:740 in
+  export_slide_to_png
+
+    737 │   
+    738 │   if IS_WINDOWS:
+    739 │   │   
+  ❱ 740 │   │   return _export_with_powerpoint_windows(ppt_path, slide_index)
+    741 │   
+    742 │   return _export_with_libreoffice(ppt_path, slide_index)
+    743 
+
+  C:\Users\2097831\Source\PPT\OSPAI_PPT_Generator\backend\slide_renderer.py:778 in
+  _export_with_powerpoint_windows
+
+    775 │   
+    776 │   slide.Export(out_path, "PNG", 1920, 1080)
+    777 │   
+  ❱ 778 │   pres.Close()
+    779 │   
+    780 │   powerpoint.Quit()
+    781 
+  in Close:2
+────────────────────────────────────────────────────────────────────────────────────────
+com_error: (-2147352567, 'Exception occurred.', (0, 'Microsoft PowerPoint',
+'Presentation.Close : Failed.', '', 0, -2147467259), None)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
