@@ -1,0 +1,14 @@
+{"tableName": "AccountDecryptionHistory", "table_description": "Records users who decrypt the encrypted information stored in the ArAccountBankInfo, Bank and CcAccount tables", "columns": [{"name": "AccountType", "datatype": "ident (15)", "nullable": "NO", "pkfk": "", "column_description": "The type of account accessed - BANK (checking or savings) or CREDIT (credit card"}, {"name": "ArAccountBankInfoId", "datatype": "ident (15)", "nullable": "YES", "pkfk": "", "column_description": "Unique, internally assigned ID for each record."}, {"name": "ArAccountId", "datatype": "ident (15)", "nullable": "YES", "pkfk": "", "column_description": "The unique id of the account that the banking information is for."}, {"name": "BankId", "datatype": "ident (15)", "nullable": "YES", "pkfk": "", "column_description": "Unique, internally assigned ID for each record."}, {"name": "CcAccountId", "datatype": "ident (15)", "nullable": "YES", "pkfk": "", "column_description": "Unique identifier for ccaccount"}, {"name": "CreateDate", "datatype": "udtlongdate", "nullable": "NO", "pkfk": "", "column_description": "The date that this record was created."}, {"name": "CreateId", "datatype": "udtuserid (120)", "nullable": "NO", "pkfk": "", "column_description": "The ID of the user who created this record."}, {"name": "LastUpdate", "datatype": "udtlongdate", "nullable": "NO", "pkfk": "", "column_description": "The date that this record was last updated."}, {"name": "TransDate", "datatype": "udtlongdate", "nullable": "NO", "pkfk": "PK", "column_description": "Date and time the user accessed decrypted account information"}, {"name": "UpdateId", "datatype": "udtuserid (120)", "nullable": "NO", "pkfk": "", "column_description": "The ID of the user who last updated this record."}, {"name": "UserId", "datatype": "zint", "nullable": "NO", "pkfk": "PK", "column_description": "Unique Identifier for an accessgroup record."}, {"name": "UserName", "datatype": "udtuserid (120)", "nullable": "NO", "pkfk": "PK", "column_description": "Windows user name of the QNXT user who accessed decrypted account information."}]}
+
+
+
+
+
+How many times was account information decrypted in March 2025?
+
+
+
+
+SELECT COUNT(*) AS DecryptionCount
+FROM AccountDecryptionHistory
+WHERE DecryptionDate >= '2025-03-01' AND DecryptionDate < '2025-04-01'
