@@ -1,21 +1,42 @@
-version: "3.9"
 services:
- streamlit_app:
-   build:
-     context: .
-     dockerfile: Dockerfile
-   container_name: ospai-ppt-streamlit
-   ports:
-     - "9402:9403"
-   env_file:
-     - .env
-   environment:
-     CHROMA_PERSIST_DIR: /app/chroma_db
-     PYTHONPATH: /app
-   volumes:
-     - ./frontend:/app/frontend
-     - ./backend:/app/backend
-     - ./templates:/app/templates
-     - ./chroma_db:/app/chroma_db
-   working_dir: /app/frontend
-   restart: always
+
+  streamlit_app:
+
+    build:
+
+      context: .
+
+      dockerfile: Dockerfile
+
+    container_name: ospai-ppt-streamlit
+
+    ports:
+
+      - "9402:9403"
+
+    env_file:
+
+      - .env
+
+    environment:
+
+      CHROMA_PERSIST_DIR: /app/chroma_db
+
+      PYTHONPATH: /app
+
+    volumes:
+
+      - ./frontend:/app/frontend
+
+      - ./backend:/app/backend
+
+      - ./templates:/app/templates
+
+      - ./chroma_db:/app/chroma_db
+
+      - /tmp:/tmp   # important for LibreOffice temp files
+
+    working_dir: /app/frontend
+
+    restart: always
+ 
